@@ -29,15 +29,40 @@ const nestedMuppet = {
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
 
+const animalSounds = {
+  cat: 'meow',
+  dog: 'woof',
+  cow: 'moo',
+  duck: 'quack',
+};
+
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
 
-// 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
+const { cat: bessie, dog: dolly, cow: babe, duck: little } = animalSounds;
+
+console.log(`Bessie the cat says ${bessie}`);
+
+// 3. 
+const { cat: blackAndWhite, dog: black, cow: pink } = animalSounds;
+
+console.log(`Black and White the cat says ${blackAndWhite}`);
 
 // Arrays
 
 // 4. Use destructuring to assign appropriate variables using the color names.
 
+const animalsByColor = [
+  ['blackAndWhite', 'cat'],
+  ['black', 'dog'],
+  ['pink', 'cow'],
+];
+
+// Destructure the array to assign variables
+const [[blackAndWhite, animal1], [black, animal2], [pink, animal3]] = animalsByColor;
+
 // 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
+
+const [[b, animal1], [k, animal2], [p, animal3]] = animalsByColor;
 
 // 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
 
